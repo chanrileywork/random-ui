@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import DropdownMenu from './common/DropdownMenu';
+import StandardButton from './common/StandardButton';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const options = ['a', 'b', 'c'];
+    return (
+        <div className='App'>
+          This is the default home page.
+          <DropdownMenu headerInput="Hello World" optionsInput={options} />
+          <StandardButton btnName="Submit" btnType="contained" />
+          <StandardButton btnName="Disable" btnType="disabled" />
+          <StandardButton btnName="Empty" btnType="outlined" />
+        </div>
+    );
 }
 
 export default App;
